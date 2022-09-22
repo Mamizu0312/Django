@@ -28,6 +28,11 @@ def loginpage(request):
         'login_failed_previous': False,
         'form': LoginForm(),
     })
+    
 
 def successpage(request):
     return render(request, 'login/login_success.html')
+
+
+def loginfailed(request):
+    return HttpResponse(request, '')
