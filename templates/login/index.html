@@ -1,0 +1,11 @@
+
+<title>New Portal Site Login</title>
+<h1><center>New Portal Site</center></h1>
+{% if login_failed_previous %}<h1>Login Failed</h1>{% endif %}
+
+<form action="{% url 'login:login' %}" method="POST"> {% csrf_token %}
+
+    {{form.as_p}}
+    <button type="submit" class="button">送信</button>
+
+</form>
